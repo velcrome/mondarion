@@ -24,9 +24,10 @@ class MondarionCanvas {
     val save = document.getElementById("save") as HTMLTextAreaElement
     val apply = document.getElementById("apply") as HTMLButtonElement
     val grid = HexGrid(Layout(Orientation.flat, Point(75.0, 75.0), Point(canvas.width / 2.0, canvas.height / 2.0)))
-    val tiles = listOf(tile("flat"),
-            tile("up_0_0"), tile("up_1_0"), tile("up_0_1"), tile("up_1_1"),
-            tile("down_0_0"), tile("down_1_0"), tile("down_0_1"), tile("down_1_1")
+    val tiles = listOf(tile("C"),
+            tile("A_0"), tile("A_1"), 
+            tile("B_0a"), tile("B_0b"),
+            tile("B_1a"), tile("B_1b")
     )
     var selected: Tile? = null
 
