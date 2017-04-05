@@ -10,6 +10,7 @@ import kotlin.browser.window
 fun getImage(path: String): HTMLImageElement {
     val image = window.document.createElement("img") as HTMLImageElement
     image.src = path
+    image.width = 100
     return image
 }
 

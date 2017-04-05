@@ -590,6 +590,7 @@ var mondarion = function (_, Kotlin) {
     var tmp$;
     var image = Kotlin.isType(tmp$ = window.document.createElement('img'), HTMLImageElement) ? tmp$ : Kotlin.throwCCE();
     image.src = path;
+    image.width = 100;
     return image;
   }
   function tile(name) {
@@ -603,7 +604,7 @@ var mondarion = function (_, Kotlin) {
     this.save = Kotlin.isType(tmp$_2 = document.getElementById('save'), HTMLTextAreaElement) ? tmp$_2 : Kotlin.throwCCE();
     this.apply = Kotlin.isType(tmp$_3 = document.getElementById('apply'), HTMLButtonElement) ? tmp$_3 : Kotlin.throwCCE();
     this.grid = new HexGrid(new Layout(Orientation$Companion_getInstance().flat, new Point(75.0, 75.0), new Point(this.canvas.width / 2.0, this.canvas.height / 2.0)));
-    this.tiles = listOf([tile('flat'), tile('up_0_0'), tile('up_1_0'), tile('up_0_1'), tile('up_1_1'), tile('down_0_0'), tile('down_1_0'), tile('down_0_1'), tile('down_1_1')]);
+    this.tiles = listOf([tile('flat'), tile('up'), tile('down'), tile('leftup'), tile('rightup'), tile('leftdown'), tile('rightdown')]);
     this.selected = null;
     this.grid.fill_za3lpa$(3);
     var tmp$_4, tmp$_5;
@@ -711,5 +712,3 @@ var mondarion = function (_, Kotlin) {
   main([]);
   return _;
 }(typeof mondarion === 'undefined' ? {} : mondarion, kotlin);
-
-//@ sourceMappingURL=mondarion.js.map
