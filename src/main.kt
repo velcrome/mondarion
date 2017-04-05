@@ -25,8 +25,10 @@ class MondarionCanvas {
     val apply = document.getElementById("apply") as HTMLButtonElement
     val grid = HexGrid(Layout(Orientation.flat, Point(75.0, 75.0), Point(canvas.width / 2.0, canvas.height / 2.0)))
     val tiles = listOf(tile("flat"),
-            tile("up_0_0"), tile("up_1_0"), tile("up_0_1"), tile("up_1_1"),
-            tile("down_0_0"), tile("down_1_0"), tile("down_0_1"), tile("down_1_1")
+            tile("up"), 
+            tile("down"), 
+            tile("leftup"), tile("rightup"), // flip sides of the same half up-chip
+            tile("leftdown"), tile("rightdown") // flip sides of the same half down-chip
     )
     var selected: Tile? = null
 
